@@ -112,9 +112,10 @@ function findById(id){
         method: 'GET',
         dataType: 'json',
         success: function (data){
+            
             $('#id').val(data.data.id); 
-            $('#usuario_id').val(data.data.usuario_id); 
-            $('#libro_id').val(data.data.libro_id);
+            $('#usuario_id').val(data.data.usuario.id);
+            $('#libro_id').val(data.data.libro.id);
             $('#fecha_prestamo').val(data.data.fechaPrestamo); 
             $('#fecha_devolucion').val(data.data.fechaDevolucion); 
             $('#state').val(data.data.state === true ? 1 : 0); 
